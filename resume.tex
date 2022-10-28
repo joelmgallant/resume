@@ -60,6 +60,13 @@
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
+% Custom output flags
+\usepackage{etoolbox}
+\newtoggle{projects}
+\toggletrue{projects}
+\newtoggle{oldjobs}
+\togglefalse{oldjobs}
+
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -119,17 +126,6 @@
     \href{https://github.com/...}{\underline{github.com/joelmgallant}}
 \end{center}
 
-
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-    {University of Prince Edward Island}{Charlottetown, PE}
-    {Bachelor of Science in Computer Science, Co-operative Education Program}{2005--2010}
-    \resumeSubheading
-      {Bluefield High}{PE}
-      {High School Diploma, graduated with honors}{2001--2004}
-  \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------
@@ -194,61 +190,74 @@
    %  \resumeItemListEnd
 %-------------------------------------------
 
+      \iftoggle{oldjobs}{
+
+        \resumeSubheading
+          {Software Developer}{April 2008 -- December 2008}
+          {Timeless Technologies}{Charlottetown, PE}
+          \resumeItemListStart
+            \resumeItem{Created and maintained web-based systems and product sites for external clients.}
+          \resumeItemListEnd
+
+        \resumeSubheading
+          {Programmer / Analyst}{January 2007 -- August 2007}
+          {Public Services and Procurement Canada}{Gatineau, Quebec}
+          \resumeItemListStart
+            \resumeItem{Created and maintained prototype database-driven web systems for internal department use.}
+            \resumeItem{Maintaining and updating existing applications.}
+            \resumeItem{Configuring and deploying application servers.}
+            \resumeItem{Interface design and implementation for prototype sites.}
+          \resumeItemListEnd
 
 
+
+        \resumeSubheading
+          {Software Engineering Intern }{May 2006 -- September 2006}
+          {Kodak Technical Services, Inc}{Summerside, PE}
+          \resumeItemListStart
+            \resumeItem{Software testing and defect resolution.}
+            \resumeItem{Design \& development of in-house software tools.}
+            \resumeItem{Hardware \& software setup and technical support.}
+          \resumeItemListEnd
+      }
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
     \resumeSubheading
-      {Software Developer}{April 2008 -- December 2008}
-      {Timeless Technologies}{Charlottetown, PE}
-      \resumeItemListStart
-        \resumeItem{Created and maintained web-based systems and product sites for external clients.}
-      \resumeItemListEnd
-
+    {University of Prince Edward Island}{Charlottetown, PE}
+    {Bachelor of Science in Computer Science, Co-operative Education Program}{2005--2010}
     \resumeSubheading
-      {Programmer / Analyst}{January 2007 -- August 2007}
-      {Public Services and Procurement Canada}{Gatineau, Quebec}
-      \resumeItemListStart
-        \resumeItem{Created and maintained prototype database-driven web systems for internal department use.}
-        \resumeItem{Maintaining and updating existing applications.}
-        \resumeItem{Configuring and deploying application servers.}
-        \resumeItem{Interface design and implementation for prototype sites.}
-      \resumeItemListEnd
-
-
-
-    \resumeSubheading
-      {Software Engineering Intern }{May 2006 -- September 2006}
-      {Kodak Technical Services, Inc}{Summerside, PE}
-      \resumeItemListStart
-        \resumeItem{Software testing and defect resolution.}
-        \resumeItem{Design \& development of in-house software tools.}
-        \resumeItem{Hardware \& software setup and technical support.}
-      \resumeItemListEnd
-
+      {Bluefield High}{PE}
+      {High School Diploma, graduated with honors}{2001--2004}
   \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
-          \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+\iftoggle{projects}{
+  \section{Projects}
+      \resumeSubHeadingListStart
+        \resumeProjectHeading
+            {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+            \resumeItemListStart
+              \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
+              \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
+              \resumeItem{Visualized GitHub data to show collaboration}
+              \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItemListEnd
+        \resumeProjectHeading
+            {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+            \resumeItemListStart
+              \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
+              \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
+              \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
+              \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItemListEnd
+      \resumeSubHeadingListEnd
 
-
+}
 
 %
 %-----------PROGRAMMING SKILLS-----------
@@ -257,7 +266,7 @@
     \small{\item{
      \textbf{Languages}{: C\#, Java, Scala, Python, SQL / NoSQL, TypeScript/JavaScript, HTML/CSS } \\
      \textbf{Frameworks}{: Play, Spring Boot, React, Node.js } \\
-     \textbf{Developer Tools}{: Git, Emacs, Visual Studio (+Code), IntelliJ IDEA} \\
+     \textbf{Developer Tools}{: Git, Visual Studio (+Code), IntelliJ IDEA, Xcode, Emacs, (neo)vim } \\
      \textbf{Deployment Tools}{: Docker, Kubernetes, ArgoCD, GitLab } \\
      \textbf{Media}{: Adobe Creative Suite, Davinci Resolve, Blender}
     }}
