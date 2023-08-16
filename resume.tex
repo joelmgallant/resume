@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage[overload]{textcase}
+\usepackage{fontawesome5}
 \input{glyphtounicode}
 
 
@@ -31,7 +32,7 @@
 
 % serif
 % \usepackage{CormorantGaramond}
-% \usepackage{charter}
+\usepackage{charter}
 
 
 \pagestyle{fancy}
@@ -71,12 +72,16 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=15pt, label={}]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItem}[2]{
+  \item[#1]\small{
+    {#2 \vspace{-2pt}}
   }
 }
 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -103,10 +108,6 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,22 +138,24 @@
 {VP, Development}{May 2020 -- Present}
 {Swarmio Media}{Halifax, NS}
 \resumeItemListStart
-\resumeItem{Direct teams across technology stacks and business units to achieve product and organization goals}
-\resumeItem{Lead platform technical design and delivery strategy across multiple applications}
-\resumeItem{Create and evolve development and business processes for high efficiency and value delivery}
-\resumeItem{Represent technical stakeholders in high-level business priority and planning sessions}
-\resumeItem{Implement continuous integration and deployment on cloud-agnostic Kubernetes clusters}
-\resumeItem{Develop and maintain organization-wide roadmap for software offerings}
+\resumeItem{\faGlobe}{ Technical stewardship during high-growth phase from core team (\textless{10}) to global entity (\textgreater{60} worldwide).}
+\resumeItem{\faGlobe}{ Direct teams across technology stacks and business units to deploy solutions for major telecommunications providers including: Ooredoo Tunisia, Globe (PH), and Etisalat UAE.}
+\resumeItem{\faCircle}{ Lead platform technical design and delivery strategy across multiple applications and regions.}
+\resumeItem{\faCircle}{ Performance and resource optimization in container-based cloud-agnostic Kubernetes deployments: scaled from hundreds to millions of supported users.}
+\resumeItem{\faCircle}{ Investigate and evaluate potential integration partners and acquisition targets for viability and compatibility (technical and strategic).}
+\resumeItem{\faCircle}{ Collaborate with key stakeholders in high-level planning sessions to foster strong communication and alignment on business priorities.}
+\resumeItem{\faCircle}{ Create and evolve development and business processes for continuous improvement, efficiency, and cost optimization.}
+\resumeItem{\faCircle}{ Foster a culture of innovation, individual and collective accountability, and open communication to encourage professional growth among team members}
 \resumeItemListEnd
 
 \resumeSubheading
 {Software Development Manager}{September 2018 -- May 2020}
 {Swarmio Media}{Halifax, NS}
 \resumeItemListStart
-\resumeItem{Building and leading a team to deliver innovative end-to-end platform solutions for the global Esports industry}
-\resumeItem{Recommend and implement agile development processes and tools throughout the organization and product line}
-\resumeItem{Lead design and transition to microservice-based platform architecture and declarative delivery pipelines}
-\resumeItem{Evolving legacy platform components to meet emerging business and technical demands}
+\resumeItem{\faCircle}{Building and leading a team to deliver innovative end-to-end platform solutions for the global Esports industry}
+\resumeItem{\faCircle}{Recommend and implement agile development processes and tools throughout the organization and product line}
+\resumeItem{\faCircle}{Lead design and transition to microservice-based platform architecture and declarative delivery pipelines}
+\resumeItem{\faCircle}{Evolving legacy platform components to meet emerging business and technical demands}
 
 \resumeItemListEnd
 
@@ -161,11 +164,11 @@
 {Technical Director}{March 2012 -- September 2018}
 {Telos Entertainment / Contagious Gaming}{Charlottetown, PE}
 \resumeItemListStart
-\resumeItem{Technical design \& execution of video games and services for a wide variety of platforms and clients}
-\resumeItem{Project planning \& reporting, client requirements gathering \& negotiation}
-\resumeItem{Team management, hiring and organizational structures}
-\resumeItem{Research and development of prototype software and third-party software integration}
-\resumeItem{Distributed systems deployment \& administration, network configuration \& monitoring}
+\resumeItem{\faCircle}{Technical design \& execution of video games and services for a wide variety of platforms and clients}
+\resumeItem{\faCircle}{Project planning \& reporting, client requirements gathering \& negotiation}
+\resumeItem{\faCircle}{Team management, hiring and organizational structures}
+\resumeItem{\faCircle}{Research and development of prototype software and third-party software integration}
+\resumeItem{\faCircle}{Distributed systems deployment \& administration, network configuration \& monitoring}
 
 \resumeItemListEnd
 
@@ -173,11 +176,11 @@
 {Game Developer}{March 2009 -- March 2012}
 {Telos Entertainment}{Charlottetown, PE}
 \resumeItemListStart
-\resumeItem{Technical design \& development of internal and contract game titles}
-\resumeItem{Unity/C\#: Desktop/Mobile/Web/SDK}
-\resumeItem{Objective-C/Java: Native extensions}
-\resumeItem{AS3/Javascript: Web/Mobile}
-\resumeItem{Java/Ruby/NodeJS: Backend Services}
+\resumeItem{\faCircle}{Technical design \& development of internal and contract game titles}
+\resumeItem{\faCircle}{Unity/C\#: Desktop/Mobile/Web/SDK}
+\resumeItem{\faCircle}{Objective-C/Java: Native extensions}
+\resumeItem{\faCircle}{AS3/Javascript: Web/Mobile}
+\resumeItem{\faCircle}{Java/Ruby/NodeJS: Backend Services}
 \resumeItemListEnd
 
 % -----------Multiple Positions Heading-----------
