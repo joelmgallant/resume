@@ -67,7 +67,7 @@
 % Custom output flags
 \usepackage{etoolbox}
 \newtoggle{projects}
-\togglefalse{projects}
+\toggletrue{projects}
 \newtoggle{oldjobs}
 \togglefalse{oldjobs}
 
@@ -187,11 +187,11 @@
 
 % -----------Multiple Positions Heading-----------
 % \resumeSubSubheading
-%  {Game Developer}{March 2009 -- March 2012}
-%  \resumeItemListStart
+% {Game Developer}{March 2009 -- March 2012}
+% \resumeItemListStart
 %     \resumeItem{Apache Beam}
 %       {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%  \resumeItemListEnd
+% \resumeItemListEnd
 %-------------------------------------------
 
 \iftoggle{oldjobs}{
@@ -241,19 +241,18 @@
 
 %-----------PROJECTS-----------
 \iftoggle{projects}{
-  \section{Recent Projects}
+  \section{Highlighted Projects}
   \resumeSubHeadingListStart
   \resumeProjectHeading
   {\textbf{Swarmio Hive Platform} $|$ \emph{Scala, Play, React, GraphQL, MongoDB, Docker, Kubernetes}}{June 2019 -- Present}
   \resumeItemListStart
-  \resumeItem{Build and lead a team of developers to modernize and extend an existing monolithic esports platform}
-  \resumeItem{Design microservice and API-based platform for scalability and flexibility}
-  \resumeItem{Implement new CI/CD processes for cloud-agnostic deployment}
-  \resumeItem{Develop organization strategy for portfolio of multiple in-house and externally sourced applications}
-  \resumeItem{Direct and advise business units on technology choices and implementation}
+  \resumeItem{\faIcon{handshake}}{Build and lead a team of developers to modernize and extend an existing monolithic esports platform}
+  \resumeItem{\faIcon{sitemap}}{Design microservice and API-based platform for scalability and flexibility}
+  \resumeItem{\faIcon{code-branch}}{Implement new CI/CD processes for cloud-agnostic deployment}
+  \resumeItem{\faIcon{sitemap}}{Develop organization strategy for portfolio of multiple in-house and externally sourced applications}
+  \resumeItem{\faIcon{briefcase}}{Direct and advise business units on technology choices and implementation}
   \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 }
 
 %
