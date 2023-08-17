@@ -108,10 +108,17 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
+    \vspace{5pt}
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectSubHeading}[1]{
+  \item
+  \textit{\small#1}
+  \vspace{-5pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -241,19 +248,21 @@
   \section{Highlighted Projects}
   \resumeSubHeadingListStart
   \resumeProjectHeading
-  {\textbf{Swarmio Hive Platform} $|$ \emph{Web: Scala, Play, React, GraphQL, MongoDB, Docker, Kubernetes}}{}
+  {\textbf{Swarmio Hive} $|$ \emph{Web: Scala, Play, React, GraphQL, MongoDB, Docker, Kubernetes}}{}
+  \resumeProjectSubHeading
+  {Gaming engagement platform for players, publishers, and telecommunications providers}
   \resumeItemListStart
-  \resumeItem{\faIcon{handshake}}{Build and lead a team of developers to modernize and extend an existing monolithic esports platform}
   \resumeItem{\faIcon{sitemap}}{Collaborate with business stakeholders (C-Suite \& Product Owner) to develop technical strategy and roadmap}
-  \resumeItem{\faIcon{sitemap}}{Design white-label/co-branding functionality to support multiple clients and regions}
+  \resumeItem{\faIcon{sitemap}}{Design responsive white-label/co-branding functionality to support multiple clients and regions}
   \resumeItem{\faIcon{sitemap}}{Architect microservice and API-based platform for scalability and flexibility}
   \resumeItem{\faIcon{code-branch}}{Implement new CI/CD processes for cloud-agnostic deployment}
-  \resumeItem{\faIcon{sitemap}}{Develop organization strategy for portfolio of multiple in-house and externally sourced applications}
-  \resumeItem{\faIcon{briefcase}}{Direct and advise business units on technology choices and implementation}
+  \resumeItem{\faIcon{cloud}}{Kubernetes deployment design, implementation, load testing, and optimization}
   \resumeItemListEnd
 
   \resumeProjectHeading
-  {\textbf{Contagious Gaming Esports Platform} $|$ \emph{Web: Java, Spring, React, Angular, MySQL}}{}
+  {\textbf{Contagious Sports Regulated Gaming Platform} $|$ \emph{Web: Java, Spring, React, Angular, MySQL}}{}
+  \resumeProjectSubHeading
+  {Real-money sports wagering and instant-win gaming for regulated markets}
   \resumeItemListStart
   \resumeItem{\faIcon{sitemap}}{Collaborate with business stakeholders (C-Suite) to design and implement new features and functionality}
   \resumeItem{\faIcon{code}}{Migrate legacy web application to modern rendering (React/HTML5 canvas) and PWA deployment packaging}
@@ -261,17 +270,31 @@
 
   \resumeProjectHeading
   {\textbf{Hit it Rich Slots} $|$ \emph{Unity: iOS, Android}}{}
+  \resumeProjectSubHeading
+  {Casual free-to-play casino experience with licensed properties}
   \resumeItemListStart
   \resumeItem{\faIcon{sitemap}}{Systems design and implementation for pluggable game features and skins}
   \resumeItem{\faIcon{gamepad}}{Implementation and optimization of game features and effects}
   \resumeItem{\faIcon{gamepad}}{Multi-platform device deployment, tuning, and verification}
+  \resumeItem{\faIcon{code}}{Development of native extensions for iOS and Android}
   \resumeItemListEnd
 
   \resumeProjectHeading
-  {\textbf{Big Buck Hunter Experience} $|$ \emph{Unity: Web, iOS, Android}}{}
+  {\textbf{Big Buck Hunter Experience} $|$ \emph{Unity: Web, iOS, Android, Node.js, MongoDB}}{}
+  \resumeProjectSubHeading
+  {Social gaming adaptation of the arcade hunting classic}
   \resumeItemListStart
   \resumeItem{\faIcon{gamepad}}{Core gameplay \& asset streaming management system design}
   \resumeItem{\faIcon{gamepad}}{Mobile device rendering optimization \& custom shader programming}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+  {\textbf{Ooka Island} $|$ \emph{Unity: PC/macOS, Ruby, MongoDB}}{}
+  \resumeProjectSubHeading
+  {Educational game for early childhood literacy development}
+  \resumeItemListStart
+  \resumeItem{\faIcon{sitemap}}{Design and development of core application structure and supporting backend systems}
+  \resumeItem{\faIcon{code}}{Integration of custom trained neural networks for phoneme-based voice recognition}
   \resumeItemListEnd
 
 
